@@ -79,14 +79,14 @@
             "enderecos": {
                 "rua": "Rua 2",
                 "numero": 55,
-                "cep": 35661520,
+                "cep": "35661520",
                 "cidade": {
                     "id": 1,
                     "nome": "Pará de Minas"
                 },
                 "telefone": {
                 "ddd": 37,
-                "telefone": 988051570
+                "telefone": "988051570"
                 }
             }
         },
@@ -124,7 +124,7 @@
             "enderecos": {
                 "rua": "Rua 2",
                 "numero": 55,
-                "cep": 35661520,
+                "cep": "35661520",
                 "cidade": {
                     "id": 1,
                     "nome": "Pará de Minas"
