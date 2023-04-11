@@ -20,11 +20,14 @@ class CityModel {
 
   factory CityModel.fromMap(Map<String, dynamic> map) {
     return CityModel(
-      id: map['id'],
-      name: map['nome'],
+      id: map['id'] ?? 0,
+      name: map['nome'] ?? '',
     );
   }
 
   factory CityModel.fromJson(String json) =>
       CityModel.fromMap(jsonDecode(json));
+
+  @override
+  String toString() => 'CityModel(id: $id, name: $name)';
 }

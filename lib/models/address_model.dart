@@ -32,9 +32,9 @@ class AddressModel {
 
   factory AddressModel.fromMap(Map<String, dynamic> map) {
     return AddressModel(
-      road: map['rua'],
-      number: map['numero'],
-      zipCode: map['cep'],
+      road: map['rua'] ?? '',
+      number: map['numero'] ?? 0,
+      zipCode: map['cep'] ?? '',
       city: CityModel.fromMap(
         map['cidade'] ?? <String, dynamic>{},
       ),
@@ -46,4 +46,9 @@ class AddressModel {
 
   factory AddressModel.fromJson(String json) =>
       AddressModel.fromMap(jsonDecode(json));
+
+  @override
+  String toString() {
+    return 'AddressModel(road: $road, number: $number, zipCode: $zipCode, city: $city, telephone: $telephone)';
+  }
 }

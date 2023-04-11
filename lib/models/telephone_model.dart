@@ -27,4 +27,7 @@ class TelephoneModel {
 
   factory TelephoneModel.fromJson(String json) =>
       TelephoneModel.fromMap(jsonDecode(json));
+
+  @override
+  String toString() => 'TelephoneModel(ddd: $ddd, number: $number)';
 }

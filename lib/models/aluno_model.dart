@@ -43,11 +43,16 @@ class AlunoModel {
               .toList() ??
           <CourseModel>[],
       address: AddressModel.fromMap(
-        map['address'] ?? <String, dynamic>{},
+        map['enderecos'] ?? <String, dynamic>{},
       ),
     );
   }
 
   factory AlunoModel.fromJson(String json) =>
       AlunoModel.fromMap(jsonDecode(json));
+
+  @override
+  String toString() {
+    return 'AlunoModel(id: $id, name: $name, age: $age, courseNames: $courseNames, courses: $courses, address: $address)';
+  }
 }

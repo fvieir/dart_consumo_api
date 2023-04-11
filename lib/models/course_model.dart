@@ -31,4 +31,8 @@ class CourseModel {
 
   factory CourseModel.fromJson(String json) =>
       CourseModel.fromMap(jsonDecode(json));
+
+  @override
+  String toString() =>
+      'CourseModel(id: $id, name: $name, isStudent: $isStudent)';
 }
